@@ -50,4 +50,21 @@ void Uart_1_Init(void);
 void Uart_Send_Data(unsigned char dat);
 void Uart_Send_String(unsigned char *str);
 
+// Rolling display functions
+void GP1247AI_Clear_Screen(unsigned char start_x, unsigned char start_y, unsigned char width, unsigned char height);
+void GP1247AI_English_Scroll_Left(unsigned char *Str, unsigned char start_y, unsigned int speed, unsigned char repeat);
+void GP1247AI_English_Scroll_Right(unsigned char *Str, unsigned char start_y, unsigned int speed, unsigned char repeat);
+void GP1247AI_English_Typewriter(unsigned char *Str, unsigned char start_x, unsigned char start_y, unsigned int speed);
+
+// Frame buffer functions for smooth scrolling
+void GP1247AI_Update_Display(unsigned int start_x, unsigned int start_y, unsigned int width, unsigned int height);
+void GP1247AI_Clear_Buffer(unsigned char value);
+void GP1247AI_Draw_Char_To_Buffer(unsigned int x, unsigned int y, unsigned char char_code, bit invert);
+void GP1247AI_Draw_String_To_Buffer(unsigned int x, unsigned int y, unsigned char *str, bit invert);
+void GP1247AI_English_Scroll_Left_Smooth(unsigned char *Str, unsigned char line, unsigned int speed, unsigned char repeat);
+
+// Test functions
+void GP1247AI_Test_All_Pixels(unsigned int delay_ms);
+void GP1247AI_Test_Scan_Lines(unsigned int delay_ms);
+
 #endif

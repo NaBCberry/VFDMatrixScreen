@@ -12,6 +12,8 @@ virtualFolder:
       files:
         - path: src/GP1247AI.c
         - path: src/VFDmain.c
+        - path: src/GP1247AI.cpp
+        - path: src/VFDmain.cpp
       folders: []
 dependenceList: []
 outDir: build
@@ -26,10 +28,11 @@ targets:
         - include
       libList: []
     excludeList:
-      - <virtual_root>/src_code/GP1247AI.cpp
       - <virtual_root>/src_code/main.cpp
       - <virtual_root>/src_code/test.c
       - <virtual_root>/src_code/vfd25363.c
+      - <virtual_root>/src_code/VFDmain.c
+      - <virtual_root>/src_code/GP1247AI.c
     settings: {}
     toolchain: Keil_C51
     toolchainConfigMap:
